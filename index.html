@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/img/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/img/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="/img/favicon/safari-pinned-tab.svg"
+      color="#0d181f"
+    />
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#0d181f" />
+    <meta name="msapplication-config" content="img/favicon/browserconfig.xml" />
+    <meta name="theme-color" content="#0d181f" />
+
+    <title>Photography</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <!-- center bar -->
+    <div class="nav-background"></div>
+
+    <!-- Navigation start -->
+    <div id="navbar" class="navbar">
+      <div id="nav-btn" class="nav-btn" onclick="showMenu()">
+        <div class="nav-btn-bar nav-btn-bar-1"></div>
+        <div class="nav-btn-bar nav-btn-bar-2"></div>
+        <div class="nav-btn-bar nav-btn-bar-3"></div>
+      </div>
+    </div>
+    <div class="site-logo">
+      <img src="./img/dlphotograpgy-white-vector.svg" alt="" srcset="" />
+    </div>
+    <h2 id="site-name">Daniela Lozano</h2>
+    <!-- Navigation end -->
+
+    <!-- <div id="canvasContainer" style="width: 100%; overflow-x: hidden"></div> -->
+
+    <div id="main-container">
+      <div class="page-container">
+        <div class="page-content page-content-page" id="home-content">
+          <div class="container-fluid">
+            <h1 class="page-title">Home</h1>
+            <div class="galerie-images fade-in">
+              <div class="cola">
+                <a>
+                  <div
+                    class="image-container"
+                    style="background-image: url('img/barbed-wire.jpg')"
+                  >
+                    <img
+                      src="img/barbed-wire.jpg"
+                      alt=""
+                      srcset=""
+                      onclick="showImage(this);"
+                    />
+                  </div>
+                </a>
+                <a>
+                  <div class="image-container">
+                    <img
+                      src="img/cans.jpg"
+                      alt=""
+                      srcset=""
+                      onclick="showImage(this);"
+                    />
+                  </div>
+                </a>
+                <a>
+                  <div class="image-container">
+                    <img
+                      src="img/doll-car.jpg"
+                      alt=""
+                      srcset=""
+                      onclick="showImage(this);"
+                    />
+                  </div>
+                </a>
+                <a>
+                  <div class="image-container">
+                    <img
+                      src="img/gate.jpg"
+                      alt=""
+                      srcset=""
+                      onclick="showImage(this);"
+                    />
+                  </div>
+                </a>
+                <a>
+                  <div class="image-container">
+                    <img
+                      src="img/hands-closeup.jpg"
+                      alt=""
+                      srcset=""
+                      onclick="showImage(this);"
+                    />
+                  </div>
+                </a>
+              </div>
+              <div class="colb">
+                <a>
+                  <div class="image-container">
+                    <img
+                      src="img/honeycomb.jpg"
+                      alt=""
+                      srcset=""
+                      onclick="showImage(this);"
+                    />
+                  </div>
+                </a>
+                <a>
+                  <div class="image-container">
+                    <img
+                      src="img/march-shadows.jpg"
+                      alt=""
+                      srcset=""
+                      onclick="showImage(this);"
+                    />
+                  </div>
+                </a>
+                <a>
+                  <div class="image-container">
+                    <img
+                      src="img/radiator.jpg"
+                      alt=""
+                      srcset=""
+                      onclick="showImage(this);"
+                    />
+                  </div>
+                </a>
+                <a>
+                  <div class="image-container">
+                    <img
+                      src="img/trash-bag.jpg"
+                      alt=""
+                      srcset=""
+                      onclick="showImage(this);"
+                    />
+                  </div>
+                </a>
+                <a>
+                  <div class="image-container">
+                    <img
+                      src="img/water-boy.jpg"
+                      alt=""
+                      srcset=""
+                      onclick="showImage(this);"
+                    />
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- popup -->
+    <div class="popup">
+      <button type="button" class="close-button" onclick="hideMenu()">
+        <img src="./img/x-icon.svg" alt="" srcset="" />
+      </button>
+    </div>
+
+    <div class="popup-image">
+      <button type="button" class="close-button" onclick="hideImage()">
+        <img src="./img/x-icon.svg" alt="" srcset="" />
+      </button>
+      <div class="popup-content">
+        <div class="image-gallery-container">
+          <img src="" alt="" />
+        </div>
+        <p>Title</p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae
+          tempora saepe sint autem, perspiciatis, harum assumenda nemo commodi
+          sed porro soluta odio fuga, ad omnis! Iure ipsa perspiciatis
+          cupiditate consequatur.
+        </p>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <div class="container footer-container">
+      <footer
+        class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top"
+      >
+        <div class="col mb-3">
+          <a
+            href="/"
+            class="d-flex align-items-center mb-3 link-dark text-decoration-none"
+          >
+            <svg class="bi me-2" width="40" height="32">
+              <use xlink:href="#bootstrap"></use>
+            </svg>
+          </a>
+          <p class="text-muted">© 2022</p>
+        </div>
+
+        <div class="col mb-3"></div>
+
+        <div class="col mb-3">
+          <h5>Section</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">Home</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">Features</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">Pricing</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">FAQs</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">About</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col mb-3">
+          <h5>Section</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">Home</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">Features</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">Pricing</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">FAQs</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">About</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col mb-3">
+          <h5>Section</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">Home</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">Features</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">Pricing</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">FAQs</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">About</a>
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+    <script src="/js/bootstrap.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js"
+      integrity="sha512-rCZdHNB0AePry6kAnKAVFMRfWPmUXSo+/vlGtrOUvhsxD0Punm/xWbEh+8vppPIOzKB9xnk42yCRZ5MD/jvvjQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      // document.oncontextmenu = function () {
+      //   return false;
+      // };
+
+      // function setup() {
+      //   let myCanvas = createCanvas(windowWidth, windowHeight);
+      //   myCanvas.parent("canvasContainer");
+
+      //   img1 = loadImage("img/barbed-wire.jpg");
+      //   img2 = loadImage("img/cans.jpg");
+      //   img3 = loadImage("img/doll-car.jpg");
+      //   img4 = loadImage("img/gate.jpg");
+      //   img5 = loadImage("img/hands-closeup.jpg");
+      //   img6 = loadImage("img/honeycomb.jpg");
+      //   img7 = loadImage("img/march-shadows.jpg");
+      //   img8 = loadImage("img/radiator.jpg");
+      //   img9 = loadImage("img/trash-bag.jpg");
+      //   img10 = loadImage("img/water-boy.jpg");
+      // }
+
+      // function draw() {
+      //   background(0, 0, 0);
+      //   image(img1, 0, 0);
+      //   image(img2, img2.width, 0);
+      //   img1.resize(0, windowWidth / 3.05);
+      //   img2.resize(0, windowWidth / 3.05);
+      // }
+
+      // function windowResized() {
+      //   resizeCanvas(windowWidth, windowHeight);
+      // }
+    </script>
+    <script>
+      function myFunction(imgs) {
+        console.log("clic");
+      }
+    </script>
+    <script>
+      function showMenu() {
+        document.querySelector(".popup").classList.add("active");
+      }
+
+      function hideMenu() {
+        document.querySelector(".popup").classList.remove("active");
+      }
+
+      function showImage(img) {
+        console.log(img.src);
+        document.querySelector("body").style.overflow = "hidden";
+        document.querySelector(".popup-image").classList.add("active");
+        document
+          .querySelector(".image-gallery-container img")
+          .setAttribute("src", img.src);
+      }
+
+      function hideImage() {
+        document.querySelector("body").style.overflow = "auto";
+        document.querySelector(".popup-image").classList.remove("active");
+      }
+
+      // Disable right click
+      document.addEventListener("contextmenu", (event) =>
+        event.preventDefault()
+      );
+
+      // disable scroll
+      document
+        .querySelector(".colb a")
+        .addEventListener("click", anchorClick, false);
+
+      function anchorClick(event) {
+        event.preventDefault();
+        return false;
+      }
+    </script>
+  </body>
+</html>
