@@ -73,7 +73,7 @@
                       src="img/barbed-wire.jpg"
                       alt=""
                       srcset=""
-                      onclick="showImage(this);"
+                      onclick="showImage(this, 1);"
                     />
                   </div>
                 </a>
@@ -83,7 +83,7 @@
                       src="img/cans.jpg"
                       alt=""
                       srcset=""
-                      onclick="showImage(this);"
+                      onclick="showImage(this, 2);"
                     />
                   </div>
                 </a>
@@ -93,7 +93,7 @@
                       src="img/doll-car.jpg"
                       alt=""
                       srcset=""
-                      onclick="showImage(this);"
+                      onclick="showImage(this, 3);"
                     />
                   </div>
                 </a>
@@ -103,7 +103,7 @@
                       src="img/gate.jpg"
                       alt=""
                       srcset=""
-                      onclick="showImage(this);"
+                      onclick="showImage(this, 4);"
                     />
                   </div>
                 </a>
@@ -113,7 +113,7 @@
                       src="img/hands-closeup.jpg"
                       alt=""
                       srcset=""
-                      onclick="showImage(this);"
+                      onclick="showImage(this, 5);"
                     />
                   </div>
                 </a>
@@ -125,7 +125,7 @@
                       src="img/honeycomb.jpg"
                       alt=""
                       srcset=""
-                      onclick="showImage(this);"
+                      onclick="showImage(this, 6);"
                     />
                   </div>
                 </a>
@@ -135,7 +135,7 @@
                       src="img/march-shadows.jpg"
                       alt=""
                       srcset=""
-                      onclick="showImage(this);"
+                      onclick="showImage(this, 7);"
                     />
                   </div>
                 </a>
@@ -145,7 +145,7 @@
                       src="img/radiator.jpg"
                       alt=""
                       srcset=""
-                      onclick="showImage(this);"
+                      onclick="showImage(this, 8);"
                     />
                   </div>
                 </a>
@@ -155,7 +155,7 @@
                       src="img/trash-bag.jpg"
                       alt=""
                       srcset=""
-                      onclick="showImage(this);"
+                      onclick="showImage(this, 9);"
                     />
                   </div>
                 </a>
@@ -165,7 +165,7 @@
                       src="img/water-boy.jpg"
                       alt=""
                       srcset=""
-                      onclick="showImage(this);"
+                      onclick="showImage(this, 10);"
                     />
                   </div>
                 </a>
@@ -181,6 +181,14 @@
       <button type="button" class="close-button" onclick="hideMenu()">
         <img src="./img/x-icon.svg" alt="" srcset="" />
       </button>
+      <div class="nav-container">
+        <nav>
+          <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="contact.html">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
 
     <div class="popup-image">
@@ -191,13 +199,21 @@
         <div class="image-gallery-container">
           <img src="" alt="" />
         </div>
-        <p>Title</p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae
-          tempora saepe sint autem, perspiciatis, harum assumenda nemo commodi
-          sed porro soluta odio fuga, ad omnis! Iure ipsa perspiciatis
-          cupiditate consequatur.
-        </p>
+        <p id="title"></p>
+        <p id="description"></p>
+      </div>
+    </div>
+
+    <div class="popup-contacto">
+      <button type="button" class="close-button" onclick="hideImage()">
+        <img src="./img/x-icon.svg" alt="" srcset="" />
+      </button>
+      <div class="popup-content">
+        <div class="image-gallery-container">
+          <img src="" alt="" />
+        </div>
+        <p id="title"></p>
+        <p id="description"></p>
       </div>
     </div>
 
@@ -224,12 +240,14 @@
           <h5>Section</h5>
           <ul class="nav flex-column">
             <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-muted">Home</a>
+              <a href="./" class="nav-link p-0 text-muted">Inicio</a>
             </li>
             <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-muted">Features</a>
+              <a href="./contact.html" class="nav-link p-0 text-muted"
+                >Contacto</a
+              >
             </li>
-            <li class="nav-item mb-2">
+            <!-- <li class="nav-item mb-2">
               <a href="#" class="nav-link p-0 text-muted">Pricing</a>
             </li>
             <li class="nav-item mb-2">
@@ -237,17 +255,19 @@
             </li>
             <li class="nav-item mb-2">
               <a href="#" class="nav-link p-0 text-muted">About</a>
-            </li>
+            </li> -->
           </ul>
         </div>
 
         <div class="col mb-3">
-          <h5>Section</h5>
+          <h5>Colecciones</h5>
           <ul class="nav flex-column">
             <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-muted">Home</a>
+              <a href="#" class="nav-link p-0 text-muted"
+                >Contra Luz De La Materia</a
+              >
             </li>
-            <li class="nav-item mb-2">
+            <!-- <li class="nav-item mb-2">
               <a href="#" class="nav-link p-0 text-muted">Features</a>
             </li>
             <li class="nav-item mb-2">
@@ -258,27 +278,36 @@
             </li>
             <li class="nav-item mb-2">
               <a href="#" class="nav-link p-0 text-muted">About</a>
-            </li>
+            </li> -->
           </ul>
         </div>
 
         <div class="col mb-3">
-          <h5>Section</h5>
+          <h5>Sígueme</h5>
           <ul class="nav flex-column">
             <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-muted">Home</a>
+              <a
+                href="https://www.facebook.com/profile.php?id=100068235553355"
+                target="_blank"
+                class="nav-link p-0 text-muted"
+                >Facebook</a
+              >
             </li>
             <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-muted">Features</a>
+              <a
+                href="https://www.instagram.com/photos96lozano/"
+                target="_blank"
+                class="nav-link p-0 text-muted"
+                >Instagram</a
+              >
             </li>
             <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-muted">Pricing</a>
-            </li>
-            <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-muted">FAQs</a>
-            </li>
-            <li class="nav-item mb-2">
-              <a href="#" class="nav-link p-0 text-muted">About</a>
+              <a
+                href="https://www.youtube.com/watch?v=qG6zGzlM1QU"
+                target="_blank"
+                class="nav-link p-0 text-muted"
+                >EUREKA Entrevista</a
+              >
             </li>
           </ul>
         </div>
@@ -329,43 +358,6 @@
         console.log("clic");
       }
     </script>
-    <script>
-      function showMenu() {
-        document.querySelector(".popup").classList.add("active");
-      }
-
-      function hideMenu() {
-        document.querySelector(".popup").classList.remove("active");
-      }
-
-      function showImage(img) {
-        console.log(img.src);
-        document.querySelector("body").style.overflow = "hidden";
-        document.querySelector(".popup-image").classList.add("active");
-        document
-          .querySelector(".image-gallery-container img")
-          .setAttribute("src", img.src);
-      }
-
-      function hideImage() {
-        document.querySelector("body").style.overflow = "auto";
-        document.querySelector(".popup-image").classList.remove("active");
-      }
-
-      // Disable right click
-      document.addEventListener("contextmenu", (event) =>
-        event.preventDefault()
-      );
-
-      // disable scroll
-      document
-        .querySelector(".colb a")
-        .addEventListener("click", anchorClick, false);
-
-      function anchorClick(event) {
-        event.preventDefault();
-        return false;
-      }
-    </script>
+    <script src="js/scripts.js"></script>
   </body>
 </html>

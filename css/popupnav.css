@@ -1,0 +1,33 @@
+  .popup {
+    display: none;
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: #000000bb;
+    z-index: 60;
+
+    animation: fadeInMenu 1s;
+  }
+
+  .popup.active {
+    display: block;
+  }
+
+  .popup .close-button {
+    background-color: transparent;
+    border: none;
+    width: 3rem;
+    height: 3rem;
+    top: 2rem;
+    right: 2rem;
+    position: absolute;
+  }
+
+  .popup .close-button img {
+    width: 100%;
+    filter: invert(1);
+  }

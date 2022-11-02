@@ -1,0 +1,35 @@
+body {
+  font: normal 12px/14px "Apercu Pro", Helvetica, Arial, sans-serif;
+  letter-spacing: 0.3em;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #000;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  margin: 0;
+}
+
+header {
+  background-image: url('/img/honeycomb.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 50vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+
+  box-sizing: border-box;
+}
+
+header h1 {
+  font-size: 3rem;
+}
+
+.nav-background {
+  display: none;
+}
