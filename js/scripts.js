@@ -6,31 +6,9 @@ function hideMenu() {
   document.querySelector(".popup").classList.remove("active");
 }
 
-const titles = [
-  "titulo 1",
-  "titulo 2",
-  "titulo 3",
-  "titulo 4",
-  "titulo 5",
-  "titulo 6",
-  "titulo 7",
-  "titulo 8",
-  "titulo 9",
-  "titulo 10",
-];
+const titles = ["", "", "", "", "", "", "", "", "", ""];
 
-const descriptions = [
-  "Descripción 1",
-  "Descripción 2",
-  "Descripción 3",
-  "Descripción 4",
-  "Descripción 5",
-  "Descripción 6",
-  "Descripción 7",
-  "Descripción 8",
-  "Descripción 9",
-  "Descripción 10",
-];
+const descriptions = ["", "", "", "", "", "", "", "", "", ""];
 
 function showImage(img, index) {
   console.log(img.src);
