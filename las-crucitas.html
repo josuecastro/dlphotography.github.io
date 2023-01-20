@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections - Las Crucitas</title>
+<style>
+    body {
+        margin: 0;
+        background-color: #444444;
+    }
+
+    header.header {
+        background-color: #FFFFFF;
+        padding: 4rem 1rem;
+        height: 50vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        font-size: 4vw;
+        color: #FFFFFF;
+        text-shadow: 0px 4px 8px #00000033;
+
+        background-image: url('img/las-crucitas-expo-4/Foto\ 22.jpg');
+        background-size: cover;
+        background-position: 0 0rem;
+        background-repeat: no-repeat;
+    }
+
+    .image-container {
+        width: 100%;
+        border: 1rem solid #FFFFFF;
+        box-sizing: border-box;
+
+        position: relative;
+        overflow: hidden;
+    }
+
+    .image-container img {
+        width: 100%;
+        transition: 0.25s;
+        transform: scale(1);
+    }
+
+    .gallery-container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 1600px;
+        margin: auto;
+        background-color: #FFFFFF;
+    }
+
+    .gallery-container .image-container {
+        width: 33%;
+        display: flex;
+        align-items: center;
+    }
+
+    .image-container img {
+        width: 100%;
+        /* pointer-events: none; */
+    }
+
+    .image-container img:hover {
+        transform: scale(1.05);
+    }
+
+    @media screen and (min-width: 1440px) {
+        .gallery-container .image-container {
+            width: 25%;
+        }
+    }
+
+    @media screen and (max-width: 980px) {
+        .gallery-container .image-container {
+            width: 33%;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .gallery-container .image-container {
+            width: 50%;
+        }
+    }
+
+    @media screen and (max-width: 425px) {
+        .gallery-container .image-container {
+            width: 100%;
+        }
+    }
+</style>
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
+
+<script>
+    // collection = {
+    //     "image1":{"name":"John", "image":"/img/barbed-wire.jpg", "description": "Description"},
+    //     "image2":{"name":"John", "image":"/img/barbed-wire.jpg", "description": "Description"},
+    //     "image3":{"name":"John", "image":"/img/barbed-wire.jpg", "description": "Description"},
+    //     "image4":{"name":"John", "image":"/img/barbed-wire.jpg", "description": "Description"},
+    //     "image5":{"name":"John", "image":"/img/barbed-wire.jpg", "description": "Description"},
+    //     "image6":{"name":"John", "image":"/img/barbed-wire.jpg", "description": "Description"},
+    //     "image7":{"name":"John", "image":"/img/barbed-wire.jpg", "description": "Description"},
+    //     "image8":{"name":"John", "image":"/img/barbed-wire.jpg", "description": "Description"},
+    //     "image9":{"name":"John", "image":"/img/barbed-wire.jpg", "description": "Description"},
+    //     "image10":{"name":"John", "image":"/img/barbed-wire.jpg", "description": "Description"},
+    // }
+
+    let collection = [
+        { "name":"Image 1" , "image":"/img/barbed-wire.jpg" , "description": "Description" },
+        { "name":"Image 2" , "image":"/img/barbed-wire.jpg" , "description": "Description" },
+        { "name":"Image 3" , "image":"/img/barbed-wire.jpg" , "description": "Description" },
+        { "name":"Image 4" , "image":"/img/barbed-wire.jpg" , "description": "Description" },
+        { "name":"Image 5" , "image":"/img/barbed-wire.jpg" , "description": "Description" },
+        { "name":"Image 6" , "image":"/img/barbed-wire.jpg" , "description": "Description" },
+        { "name":"Image 7" , "image":"/img/barbed-wire.jpg" , "description": "Description" },
+        { "name":"Image 8" , "image":"/img/barbed-wire.jpg" , "description": "Description" },
+        { "name":"Image 9" , "image":"/img/barbed-wire.jpg" , "description": "Description" },
+        { "name":"Image 10" , "image":"/img/barbed-wire.jpg" , "description": "Description" }];
+    // const collectionObject = JSON.parse(collection);
+
+    // console.log(collectionObject.collection[0].image);
+    let imageContainer = document.createElement("div");
+    collection.forEach(obj=> {
+        // console.log(obj.image);
+        document.querySelector('#galleryContainer').createElement("div");
+    });
+</script>
+</head>
+<body>
+    <header class="header">
+        <h1>Las Crucitas</h1>
+    </header>
+
+    <section>
+        <div class="gallery-container" id="galleryContainer">
+            <div class="image-container" onclick="showImage(this, 1);"><img src="/img/las-crucitas-expo-4/Foto 1.jpg" alt="" protected oncontextmenu="return false"></div>
+            <div class="image-container" onclick="showImage(this, 2);"><img src="/img/las-crucitas-expo-4/Foto 2.jpg" alt="" protected oncontextmenu="return false"></div>
+            <div class="image-container" onclick="showImage(this, 3);"><img src="/img/las-crucitas-expo-4/Foto 3.jpg" alt="" protected oncontextmenu="return false"></div>
+            <div class="image-container" onclick="showImage(this, 4);"><img src="/img/las-crucitas-expo-4/Foto 4.jpg" alt="" protected oncontextmenu="return false"></div>
+            <div class="image-container" onclick="showImage(this, 5);"><img src="/img/las-crucitas-expo-4/Foto 5.jpg" alt="" protected oncontextmenu="return false"></div>
+            <div class="image-container" onclick="showImage(this, 6);"><img src="/img/las-crucitas-expo-4/Foto 6.jpg" alt="" protected oncontextmenu="return false"></div>
+            <div class="image-container" onclick="showImage(this, 7);"><img src="/img/las-crucitas-expo-4/Foto 7.jpg" alt="" protected oncontextmenu="return false"></div>
+            <div class="image-container" onclick="showImage(this, 8);"><img src="/img/las-crucitas-expo-4/Foto 8.jpg" alt="" protected oncontextmenu="return false"></div>
+            <div class="image-container" onclick="showImage(this, 9);"><img src="/img/las-crucitas-expo-4/Foto 9.jpg" alt="" protected oncontextmenu="return false"></div>
+            <div class="image-container" onclick="showImage(this, 10);"><img src="/img/las-crucitas-expo-4/Foto 10.jpg" alt="" protected oncontextmenu="return false"></div>
+            <div class="image-container" onclick="showImage(this, 11);"><img src="/img/las-crucitas-expo-4/Foto 11.jpg" alt="" protected oncontextmenu="return false"></div>
+            <div class="image-container" onclick="showImage(this, 12);"><img src="/img/las-crucitas-expo-4/Foto 12.jpg" alt="" protected oncontextmenu="return false"></div>
+            <div class="image-container" onclick="showImage(this, 13);"><img src="/img/las-crucitas-expo-4/Foto 13.jpg" alt="" protected oncontextmenu="return false"></div>
+            <div class="image-container" onclick="showImage(this, 14);"><img src="/img/las-crucitas-expo-4/Foto 14.jpg" alt="" protected oncontextmenu="return false"></div>
+            <div class="image-container" onclick="showImage(this, 15);"><img src="/img/las-crucitas-expo-4/Foto 15.jpg" alt="" protected oncontextmenu="return false"></div>
+            <div class="image-container" onclick="showImage(this, 16);"><img src="/img/las-crucitas-expo-4/Foto 16.jpg" alt="" protected oncontextmenu="return false"></div>
+            <div class="image-container" onclick="showImage(this, 17);"><img src="/img/las-crucitas-expo-4/Foto 17.jpg" alt="" protected oncontextmenu="return false"></div>
+            <div class="image-container" onclick="showImage(this, 18);"><img src="/img/las-crucitas-expo-4/Foto 18.jpg" alt="" protected oncontextmenu="return false"></div>
+            <div class="image-container" onclick="showImage(this, 19);"><img src="/img/las-crucitas-expo-4/Foto 19.jpg" alt="" protected oncontextmenu="return false"></div>
+            <div class="image-container" onclick="showImage(this, 20);"><img src="/img/las-crucitas-expo-4/Foto 20.jpg" alt="" protected oncontextmenu="return false"></div>
+            <div class="image-container" onclick="showImage(this, 21);"><img src="/img/las-crucitas-expo-4/Foto 21.jpg" alt="" protected oncontextmenu="return false"></div>
+            <div class="image-container" onclick="showImage(this, 22);"><img src="/img/las-crucitas-expo-4/Foto 22.jpg" alt="" protected oncontextmenu="return false"></div>
+            <div class="image-container" onclick="showImage(this, 23);"><img src="/img/las-crucitas-expo-4/Foto 23.jpg" alt="" protected oncontextmenu="return false"></div>
+            <div class="image-container" onclick="showImage(this, 24);"><img src="/img/las-crucitas-expo-4/Foto 24.jpg" alt="" protected oncontextmenu="return false"></div>
+            <div class="image-container" onclick="showImage(this, 25);"><img src="/img/las-crucitas-expo-4/Foto 25.jpg" alt="" protected oncontextmenu="return false"></div>
+            <div class="image-container" onclick="showImage(this, 26);"><img src="/img/las-crucitas-expo-4/Foto 26.jpg" alt="" protected oncontextmenu="return false"></div>
+            <div class="image-container" onclick="showImage(this, 27);"><img src="/img/las-crucitas-expo-4/Foto 27.jpg" alt="" protected oncontextmenu="return false"></div>
+            <div class="image-container" onclick="showImage(this, 28);"><img src="/img/las-crucitas-expo-4/Foto 28.jpg" alt="" protected oncontextmenu="return false"></div>
+            <div class="image-container" onclick="showImage(this, 29);"><img src="/img/las-crucitas-expo-4/Foto 29.jpg" alt="" protected oncontextmenu="return false"></div>
+            <div class="image-container" onclick="showImage(this, 30);"><img src="/img/las-crucitas-expo-4/Foto 30.jpg" alt="" protected oncontextmenu="return false"></div>
+            <div class="image-container" onclick="showImage(this, 31);"><img src="/img/las-crucitas-expo-4/Foto 31.jpg" alt="" protected oncontextmenu="return false"></div>
+            <div class="image-container" onclick="showImage(this, 32);"><img src="/img/las-crucitas-expo-4/Foto 32.jpg" alt="" protected oncontextmenu="return false"></div>
+            <div class="image-container" onclick="showImage(this, 33);"><img src="/img/las-crucitas-expo-4/Foto 33.jpg" alt="" protected oncontextmenu="return false"></div>
+            <div class="image-container" onclick="showImage(this, 34);"><img src="/img/las-crucitas-expo-4/Foto 34.jpg" alt="" protected oncontextmenu="return false"></div>
+            <!-- <div class="image-container" onclick="showImage(this, 35);"><img src="/img/las-crucitas-expo-4/Foto 35.jpg" alt="" protected oncontextmenu="return false"></div> -->
+            
+        </div>
+    </section>
+
+    <div class="popup-image">
+        <button type="button" id="closeButton" class="close-button" title="Close Button" onclick="hideImage()">
+          <img src="./img/x-icon.svg" alt="" srcset="" />
+        </button>
+        <div class="popup-content">
+          <div class="image-gallery-container">
+            <img src="" alt="" />
+          </div>
+          <p id="title"></p>
+          <p id="description"></p>
+        </div>
+      </div>
+
+<style>
+    .popup-image {
+    display: none;
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    width: 100vw;
+    min-height: 100vh;
+    background: #000000ee;
+    /* overflow: auto; */
+    z-index: 60;
+    padding: 5rem 0;
+
+    animation: fadeIn 1s;
+  }
+
+  .popup-image.active {
+    /* display: block; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .popup-image .popup-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 2rem 1rem;
+    overflow-y: auto;
+  }
+
+  .popup-image .popup-content p {
+    max-width: 600px;
+    padding: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .popup-image .close-button {
+    background-color: transparent;
+    border: none;
+    width: 10vw;
+    max-width: 3rem;
+    height: 10vw;
+    max-height: 3rem;
+    top: 2vw;
+    right: 2vw;
+    position: fixed;
+    z-index: 110;
+  }
+
+  .popup-image .close-button img {
+    width: 100%;
+    filter: invert(1);
+  }
+
+  .image-gallery-container img {
+    width: 100%;
+  }
+
+    /* Animation */
+    @keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+</style>
+
+<script>
+const titles = [
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+];
+
+const descriptions = [
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+];
+
+function showImage(img, index) {
+  console.log('imagen', img.querySelector('img').src);
+  document.querySelector("body").style.overflow = "hidden";
+  document.querySelector(".popup-image").classList.add("active");
+  document
+    .querySelector(".image-gallery-container img")
+    .setAttribute("src", img.querySelector('img').src);
+  if (index != undefined) {
+    document.querySelector("#title").innerText = titles[index - 1];
+    document.querySelector("#description").innerText = descriptions[index - 1];
+  } else {
+    document.querySelector("#title").innerText = "";
+    document.querySelector("#description").innerText = "";
+  }
+}
+
+function hideImage() {
+  document.querySelector("body").style.overflow = "auto";
+  document.querySelector(".popup-image").classList.remove("active");
+}
+</script>
+</body>
+</html>
